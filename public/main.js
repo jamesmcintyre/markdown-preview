@@ -19,7 +19,8 @@ function convertText(){
   .success(function(data) {
     var resultParsed = JSON.parse(data);
     var $toDomObj = $.parseHTML(resultParsed);
-    $('#rightpanel').append($toDomObj);
+
+    $('#rightpanel').empty().append($toDomObj);
   })
   .fail(function(err) {
     alert('something went wrong :(')
